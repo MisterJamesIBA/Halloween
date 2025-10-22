@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/verb-memory.css">
+</head>
+<body>
+    <div id="cardArea"></div>
+
+    <div class="ui" id="startScreen">
+         <h1>Spooky Verbs!</h1>
+         <br>
+        <button type="button" id="startBtn">start game</button>
+    </div>
+
+    <div id="winScreen" class="ui hide">
+        <h1>You Win</h1>
+        <button onclick="location.reload();">Try Again?</button>
+    </div>
+
+    <div id="gameOver" class="ui hide">
+        <div style="display: block;">
+            <h1>Game Over</h1>
+            <button>Retry</button>
+        </div>
+    </div>
+
+    <script src="../js/verb-memory.js"></script>
+</body>
+</html>
