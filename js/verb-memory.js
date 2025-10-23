@@ -97,14 +97,14 @@ const createCard = (word) => {
 
 
 const start = () => {
-     GOOD_MORNING.play();
+    GOOD_MORNING.play();
     START.classList.add("hide");
     let cardArea = document.querySelector('#cardArea');
 
     let COPY = VOCAB.sort(() => Math.random() - 0.5);
     let vocab = [];
 
-    const MATCH = 20;
+    const MATCH = 10;
 
     for (let i = 0; i < MATCH; i++) {
         vocab.push({
@@ -161,7 +161,7 @@ const start = () => {
                 }, 1000);
             }
 
-            if(score >= MATCH){
+            if (score > MATCH) {
                 console.log("win");
                 WIN.classList.remove("hide");
             }
@@ -177,6 +177,12 @@ window.onload = function () {
     startBtn.addEventListener("click", () => {
         start();
     });
+
+    // window.addEventListener('beforeunload', function (event) {
+    //     // Display a confirmation dialog
+    //     event.preventDefault(); // Required for some browsers
+    //     event.returnValue = ''; // Standard way to trigger the dialog
+    // });
 }
 
 

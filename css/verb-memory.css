@@ -45,9 +45,10 @@ memory
 */
 
 .memory-card {
+    margin: 10px;
     background-color: transparent;
-    width: 200px;
-    height: 200px;
+    width: 20vw;
+    height: 15vw;
     perspective: 1000px;
 }
 
@@ -96,4 +97,5 @@ memory
     flex-direction: row;
     margin: 1rem;
     flex-wrap: wrap;
+    margin: auto;
 }
