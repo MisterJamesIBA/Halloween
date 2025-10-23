@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: orange;
+    background-color: yellow;
     font-family: "MyCustomFont";
 }
 
@@ -47,8 +47,8 @@ memory
 .memory-card {
     margin: 10px;
     background-color: transparent;
-    width: 20vw;
-    height: 15vw;
+    width: 21vw;
+    height: 10vw;
     perspective: 1000px;
 }
 
@@ -69,6 +69,7 @@ memory
 
 .memory-card-front,
 .memory-card-back {
+    border: 1px solid black;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -85,10 +86,12 @@ memory
 
 .memory-card-front {
     color: black;
+    background-color: orange;
 }
 
 .memory-card-back {
-    color: white;
+    color: black;
+    background-color: white;
     transform: rotateY(180deg);
 }
 

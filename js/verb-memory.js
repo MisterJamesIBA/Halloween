@@ -104,7 +104,7 @@ const start = () => {
     let COPY = VOCAB.sort(() => Math.random() - 0.5);
     let vocab = [];
 
-    const MATCH = 10;
+    const MATCH = 20;
 
     for (let i = 0; i < MATCH; i++) {
         vocab.push({
@@ -145,6 +145,8 @@ const start = () => {
                 // match
                 last = -1;
                 lastIndex = -1;
+
+                console.log(score, MATCH);
             }
             else if (last != word.index) {
 
@@ -160,8 +162,7 @@ const start = () => {
 
                 }, 1000);
             }
-
-            if (score > MATCH) {
+            if (score >= MATCH) {
                 console.log("win");
                 WIN.classList.remove("hide");
             }
