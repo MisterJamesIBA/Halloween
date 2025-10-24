@@ -16,7 +16,7 @@ const VOCAB = [
     { "past": "saw", "present": "see" },
     { "past": "showed", "present": "show" },
     { "past": "sang", "present": "sing" },
-    { "past": "spoke", "present": "speek" },
+    { "past": "spoke", "present": "speak" },
     { "past": "swam", "present": "swim" },
     { "past": "took", "present": "take" },
     { "past": "wore", "present": "wear" },
