@@ -126,18 +126,30 @@ const start = () => {
 
     let cards = [];
 
+    let busy = false;
+
     vocab.forEach((word, index) => {
+
         let card = createCard(word.word);
         cards.push(card);
         cardArea.appendChild(card);
 
         card.addEventListener("click", () => {
 
+            if (busy) {
+                return;
+            }
+
+            busy = true;
+
             card.classList.add("flip");
 
             if (last == -1) {
                 last = word.index;
                 lastIndex = index;
+                setTimeout(() => {
+                    busy = false;
+                }, 500);
             }
             else if (last == word.index) {
                 CORRECT.play();
@@ -146,7 +158,9 @@ const start = () => {
                 last = -1;
                 lastIndex = -1;
 
-                console.log(score, MATCH);
+                setTimeout(() => {
+                    busy = false;
+                }, 500);      
             }
             else if (last != word.index) {
 
@@ -159,6 +173,8 @@ const start = () => {
                     // not a match
                     last = -1;
                     lastIndex = -1;
+
+                    busy = false;
 
                 }, 1000);
             }
