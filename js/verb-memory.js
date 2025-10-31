@@ -136,6 +136,10 @@ const start = () => {
 
         card.addEventListener("click", () => {
 
+            if(card.classList.contains("flip")){
+                return;
+            }
+
             if (busy) {
                 return;
             }
